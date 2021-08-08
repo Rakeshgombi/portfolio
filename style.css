@@ -178,7 +178,7 @@ p {
 .title {
   width: 100%;
   text-align: center;
-
+  margin-bottom: 2em;
 }
 
 .title h2 {
@@ -517,7 +517,7 @@ p {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
 
   .education .content .educationBx,
   .project .content .projectBx {
