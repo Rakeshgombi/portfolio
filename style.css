@@ -1,0 +1,529 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.toggle {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #000 url("./menu.png") no-repeat center center/cover;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.toggle.active {
+  background: #000 url("./close.png") no-repeat center center/cover;
+}
+
+section {
+  padding: 100px;
+  min-height: 100vh;
+}
+
+.banner {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.banner .imgSidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.banner .imgSidebar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner .contentBx,
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 500px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+}
+
+.logoText {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #333;
+  color: #fff;
+  padding: 0 5px;
+}
+
+.banner .contentBx h4 {
+  font-size: 1.5em;
+  color: #333;
+  font-weight: 300;
+}
+
+.banner .contentBx h4 span {
+  color: #00bcd4;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.banner .contentBx h2 {
+  font-size: 3em;
+  color: #333;
+  line-height: 1em;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 300;
+}
+
+.btn {
+  background: #00bcd4;
+  color: #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.sidebar {
+  position: fixed;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  padding: 40px;
+  z-index: 100;
+  right: -100%;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  margin: 10px 0;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.sidebar ul li a:hover {
+  color: #00bcd4;
+}
+
+.sci {
+  position: absolute;
+  left: 120px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sci li {
+  list-style-type: none;
+}
+
+.sci li img {
+  transform: scale(0.5);
+  opacity: 0.7;
+  transition: 0.1s all linear;
+}
+
+.sci li a:hover img {
+  transform: scale(0.52);
+  opacity: 1;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+
+}
+
+.title h2 {
+  position: relative;
+  color: #00bcd4;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.title p {
+  max-width: 700px;
+  display: inline-block;
+}
+
+.title h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: #000;
+}
+
+.title.white {
+  color: #fff;
+}
+
+.title.white h2::before {
+  background: rgb(255, 255, 255);
+}
+
+.summary {
+  background: #000;
+  min-height: 100vh;
+}
+
+.summary .content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4em;
+}
+
+.summary .content .textBx {
+  min-width: 49%;
+  width: 49%;
+}
+
+.summary .content .textBx ul {
+  color: #fff;
+}
+
+.summary .content .textBx ul li{
+  font-size: 1.3em;
+  line-height: 1.5em;
+  font-weight: lighter;
+}
+
+.summary .content .imgBx {
+  margin-left: 40px;
+}
+
+.summary .content .imgBx img {
+  width: 100%;
+  /* height: auto; */
+}
+.education{
+  background: #fff;
+}
+.education .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.education .content .educationBx {
+  padding: 40px 20px;
+  max-width: 340px;
+  margin: 20px;
+  transition: 0.5s;
+  text-align: center;
+  background: #f5f5f5;
+  box-shadow: 2px 2px 20px rgba(51, 51, 51, 0.397);
+  border-radius: 8PX;
+
+}
+
+.education .content .educationBx:hover {
+
+  background: #000000;
+}
+
+.education .content .educationBx img {
+  width: 90%;
+  height: 150px;
+}
+
+/* .education .content .educationBx:hover img {
+  filter: invert(1);
+} */
+
+.education .content .educationBx h2 {
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.education .content .educationBx:hover h2 {
+  color: #fff;
+}
+
+.education .content .educationBx p {
+  margin-top: 20px;
+  margin: 0;
+  transition: 0.5s;
+}
+
+.education .content .educationBx .period {
+  margin: 10px;}
+
+.education .content .educationBx:hover p {
+  color: #fff;
+}
+
+.project{
+  
+  background: #fff;
+}
+.project .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project .content .projectBx {
+  position: relative;
+  width: 265px;
+  height: 265px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.project .content .projectBx .imgBx,
+.project .content .projectBx .textBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.project .content .projectBx .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project .content .projectBx .textBx {
+  background: #000;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.project .content .projectBx:hover .textBx {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.project .content .projectBx .textBx h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+
+.contact {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .contactForm {
+  position: relative;
+  width: 700px;
+  margin-top: 20px;
+}
+
+.contact .contactForm .row {
+  width: 100%;
+  display: flex;
+}
+
+.contact .contactForm .row .col50 {
+  width: 50%;
+  margin: 10px;
+}
+
+.contact .contactForm .row .col100 {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.contact .contactForm .row input,
+.contact .contactForm .row textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.contact .contactForm .row textarea {
+  height: 100px;
+}
+
+.contact .contactForm .row input[type="submit"] {
+  background: #00bcd4;
+  color: #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+  max-width: 150px;
+  transition: 0.2s;
+}
+
+.contact .contactForm .row input[type="submit"]:hover {
+  background: #00bbd4be;
+}
+
+@media (max-width: 991px) {
+  .toggle {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .banner .imgSidebar {
+    display: none;
+  }
+
+  .banner .contentBx,
+  .sidebar {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .sidebar ul li a {
+    margin: 1em 0;
+    font-size: 1.5em;
+  }
+
+  .sidebar ul li {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+  }
+
+  .banner .contentBx .imgBx {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .logoText {
+    left: 40px;
+  }
+
+  .toggle {
+    right: 40px;
+  }
+
+  .sci {
+    left: 40px;
+  }
+
+  section {
+    padding: 40px;
+  }
+
+  .summary .content {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .summary .content .textBx {
+    width: 100%;
+  }
+
+  .summary .content .imgBx {
+    margin: 0;
+  }
+
+  .education .content .educationBx {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+
+  .contact .contactForm {
+    width: 100%;
+  }
+
+
+  .contactForm .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .contact .contactForm .row .col50 {
+    width: 100%;
+  }
+
+
+}
+
+@media (max-width: 500px) {
+
+  .education .content .educationBx,
+  .project .content .projectBx {
+    margin: 10px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
